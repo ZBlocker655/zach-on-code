@@ -9,6 +9,7 @@
     "serve": "npx @11ty/eleventy --serve",
     "start": "npx @11ty/eleventy --serve",
     "debug": "cross-env DEBUG=* npx @11ty/eleventy",
+    "dryrun": "npx @11ty/eleventy --dryrun"
   },
   "repository": {
     "type": "git",
