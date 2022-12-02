@@ -1,12 +1,12 @@
 ---
 layout: layouts/home.njk
-permalink: /posts/
+override:tags: []
 eleventyNavigation:
-  key: Archive
+  key: Blog
   order: 2
 ---
 
-<h1>Archive</h1>
+<h1>Blog archive</h1>
 
-{% set postslist = collections.posts %}
+{% set postslist = collections.blog %}
 {% include "postslist.njk" %}
