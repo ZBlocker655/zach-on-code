@@ -1,11 +1,19 @@
 ---
 layout: layouts/home.njk
+blogPostsToDisplay: 10
 ---
-{% set maxPosts = collections.blog.length | min(3) %}
-<h1>Latest {% if maxPosts == 1 %}Post{% else %}{{ maxPosts }} Posts{% endif %}</h1>
 
-{% set postslist = collections.blog | head(-3) %}
-{% set postslistCounter = collections.blog | length %}
-{% include "postslist.njk" %}
+<section class="intro">
+  <h1>{{ metadata.author.name }}</h1>
+  <p>{{ metadata.author.tagline }}</p>
+</section>
 
-<p>More posts can be found in <a href="{{ '/blog/' | url }}">the blog archive</a>.</p>
+<section class="posts">
+  {% set maxPosts = collections.blog.length | min(blogPostsToDisplay) %}
+  <h1>Latest posts</h1>
+
+  {% set postslist = collections.blog | head(-1*maxPosts) %}
+  {% include "postslist.njk" %}
+
+  <p><a href="{{ '/blog/' | url }}">Earlier posts...</a></p>
+</section>
