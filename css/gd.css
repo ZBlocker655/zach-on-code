@@ -7,9 +7,9 @@
   --measure-min: 288px;
   --font: -apple-system, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   --font-header: var(--font);
-  --color-body: #1a1a1a;
+  --color-body: #fff;
   --color-body-light: #626A6E;
-  --color-body-inverted: #fff;
+  --color-body-inverted: #1a1a1a;
   --color-select: #b3d4fc;
   --color-access: #fd0;
   --color-error: #f00;
@@ -51,7 +51,7 @@
 html {
   margin: 0;
   padding: 0;
-  background: var(--color-body)
+  background: var(--color-body-inverted)
 }
 
 body {
@@ -65,8 +65,8 @@ body {
 }
 
 header {
-  background: var(--color-body);
-  color: var(--color-body-inverted);
+  background: var(--color-body-inverted);
+  color: var(--color-body);
   padding: var(--unit);
   overflow: hidden;
   /* display: grid */
@@ -199,14 +199,12 @@ a[href*="://"]:after {
 }
 
 body>header a {
-  color: var(--color-body-inverted);
   font-weight: 700;
   text-decoration: none
 }
 
 body>header a:hover {
   text-decoration: underline;
-  color: var(--color-body-inverted)
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -1007,7 +1005,7 @@ body>footer {
   margin-top: var(--unit-3);
   padding: var(--unit-3) 0;
   border-top: 1px solid var(--color-line);
-  background: var(--color-very-light);
+  background: var(--color-body-inverted);
   overflow: hidden
 }
 
