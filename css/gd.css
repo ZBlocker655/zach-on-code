@@ -81,12 +81,12 @@ main header {
 }
 
 nav {
-  /* display: grid; */
-  /* max-width: calc(var(--measure) - var(--unit-2)); */
-  /* grid-template-columns: repeat(auto-fit, 1fr); */
-  /* margin: var(--unit) auto; */
-  /* padding: 0 var(--unit-1); */
-  /* width: 100% */
+  display: grid;
+  max-width: calc(var(--measure) - var(--unit-2));
+  grid-template-columns: repeat(auto-fit, 1fr);
+  margin: var(--unit) auto;
+  padding: 0 var(--unit-1);
+  width: 100%
 }
 
 nav ol, nav ul {

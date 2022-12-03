@@ -22,17 +22,22 @@
   </head>
   <body>
     <header>
-      <h1 class="title"><a href="{{ '/' | url }}">{{ metadata.title }}</a></h1>
-
       {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
       <nav class="menu">
-      {%- for entry in collections.all | eleventyNavigation %}
-        <a href="{{ entry.url | url }}"{% if entry.url == page.url %} class="nav-item-active"{% endif %}>{{ entry.title }}</a>
-      {%- endfor %}
+        <a class="title" href="{{ '/' | url }}">{{ metadata.title }}</a>
+        <ul>
+          {%- for entry in collections.all | eleventyNavigation %}
+          <li><a href="{{ entry.url | url }}"{% if entry.url == page.url %} class="nav-item-active"{% endif %}>{{ entry.title }}</a></li>
+          {%- endfor %}
+        </ul>
       </nav>
 
       <nav class="social-media">
-        Social media icons
+        <ul>
+          <li>Social</li>
+          <li>media</li>
+          <li>icons</li>
+        </ul>
       </nav>
     </header>
 
@@ -42,20 +47,26 @@
 
     <footer>
       <nav class="social-media">
-        Social media icons
+        <ul>
+          <li>Social</li>
+          <li>media</li>
+          <li>icons</li>
+        </ul>
       </nav>
 
-      <section class="footer-text">
-        <span class="copyright">Copyright © 2022 {{ metadata.author.name }}</span>
-        <span class="built-by">
-          Built with
-          <a href="https://11ty.dev">Eleventy</a>,
-          <a href="https://gdcss.netlify.app/">gd.css</a>
-        </span>
-        <span class="feed-link"><a href="{{ metadata.feed.path | url }}">Feed</a></span>
-        <span class="sitemap-link"><a href="{{ metadata.sitemap.path | url }}">Sitemap</a></span>
-        <span class="source-link"><a href="{{ metadata.repository }}">Source</a></span>
-      </section>
+      <nav class="footer-text">
+        <ul>
+          <li class="copyright">Copyright © 2022 {{ metadata.author.name }}</li>
+          <li class="built-by">
+            Built with
+            <a href="https://11ty.dev">Eleventy</a>,
+            <a href="https://gdcss.netlify.app/">gd.css</a>
+          </li>
+          <li class="feed-link"><a href="{{ metadata.feed.path | url }}">Feed</a></li>
+          <li class="sitemap-link"><a href="{{ metadata.sitemap.path | url }}">Sitemap</a></li>
+          <li class="source-link"><a href="{{ metadata.repository }}">Source</a></li>
+        </ul>
+      </nav>
     </footer>
 
     <!-- Current page: {{ page.url | url }} -->
