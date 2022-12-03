@@ -13,6 +13,7 @@
     <meta name="description" content="{{ description or metadata.description }}">
     <meta name="generator" content="{{ eleventy.generator }}">
 
+    <link rel="stylesheet" href="{{ '/css/gd.css' | url }}">
     <link rel="stylesheet" href="{{ '/css/index.css' | url }}">
     <link rel="stylesheet" href="{{ '/css/prism-base16-monokai.dark.css' | url }}">
     <link rel="stylesheet" href="{{ '/css/prism-diff.css' | url }}">
@@ -46,7 +47,11 @@
 
       <section class="footer-text">
         <span class="copyright">Copyright © 2022 {{ metadata.author.name }}</span>
-        <span class="built-by">Built with <a href="https://11ty.dev">Eleventy</a></span>
+        <span class="built-by">
+          Built with
+          <a href="https://11ty.dev">Eleventy</a>,
+          <a href="https://gdcss.netlify.app/">gd.css</a>
+        </span>
         <span class="feed-link"><a href="{{ metadata.feed.path | url }}">Feed</a></span>
         <span class="sitemap-link"><a href="{{ metadata.sitemap.path | url }}">Sitemap</a></span>
         <span class="source-link"><a href="{{ metadata.repository }}">Source</a></span>
