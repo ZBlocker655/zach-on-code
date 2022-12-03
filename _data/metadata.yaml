@@ -8,6 +8,8 @@ feed:
   filename: feed.xml
   path: /feed/feed.xml
   id: https://zachoncode.dev/
+sitemap:
+  path: /sitemap.xml
 jsonfeed:
   path: /feed/feed.json
   url: https://zachoncode.dev/feed/feed.json

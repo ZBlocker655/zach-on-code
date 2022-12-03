@@ -8,6 +8,7 @@ const yaml = require("js-yaml");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginNavigation = require("@11ty/eleventy-navigation");
+const sitemap = require("@quasibit/eleventy-plugin-sitemap");
 
 module.exports = function(eleventyConfig) {
   // YAML data files
@@ -21,6 +22,17 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
   eleventyConfig.addPlugin(pluginNavigation);
+  eleventyConfig.addPlugin(sitemap, {
+    // Name of the property for the last modification date.
+    // By default it is undefined and the plugin will fallback to `date`.
+    // When set, the plugin will try to use this property and it will fallback
+    // to the `date` property when needed.
+    lastModifiedProperty: "modified",
+
+    sitemap: {
+      hostname: "https://zachoncode.dev",
+    },
+  });
 
   eleventyConfig.addFilter("readableDate", dateObj => {
     return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat("dd LLL yyyy");
