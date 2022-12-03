@@ -116,34 +116,9 @@ code {
   word-break: break-all;
 }
 
-/* Header */
-.home {
-  padding: 0 1rem;
-  float: left;
-  margin: 1rem 0; /* 16px /16 */
-  font-size: 1em; /* 16px /16 */
-}
-.home :link:not(:hover) {
+/* Title */
+.title :link:not(:hover) {
   text-decoration: none;
-}
-
-/* Nav */
-.nav {
-  padding: 0;
-  list-style: none;
-  float: left;
-  margin-left: 1em;
-}
-.nav-item {
-  display: inline-block;
-  margin-right: 1em;
-}
-.nav-item a[href]:not(:hover) {
-  text-decoration: none;
-}
-.nav-item-active {
-  font-weight: 700;
-  text-decoration: underline;
 }
 
 /* Posts list */
@@ -186,7 +161,6 @@ code {
   font-weight: 700;
 }
 
-
 /* Tags */
 .post-tag {
   display: inline-flex;
@@ -224,31 +198,4 @@ a[href].post-tag:focus {
   :root {
     --color-infobox: #082840;
   }
-}
-
-.infobox {
-  background-color: var(--color-infobox);
-  color: var(--color-gray-90);
-  padding: 1em 0.625em; /* 16px 10px /16 */
-}
-.infobox ol:only-child {
-  margin: 0;
-}
-
-/* Direct Links / Markdown Headers */
-.direct-link {
-  font-family: sans-serif;
-  text-decoration: none;
-  font-style: normal;
-  margin-left: .1em;
-}
-a[href].direct-link,
-a[href].direct-link:visited {
-  color: transparent;
-}
-a[href].direct-link:focus,
-a[href].direct-link:focus:visited,
-:hover > a[href].direct-link,
-:hover > a[href].direct-link:visited {
-  color: #aaa;
 }
