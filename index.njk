@@ -3,10 +3,7 @@ layout: layouts/home.njk
 blogPostsToDisplay: 10
 ---
 
-<section class="intro">
-  <h1>{{ metadata.author.name }}</h1>
-  <p>{{ metadata.author.tagline }}</p>
-</section>
+{% include "intro.njk" %}
 
 <section class="posts">
   {% set maxPosts = collections.blog.length | min(blogPostsToDisplay) %}
