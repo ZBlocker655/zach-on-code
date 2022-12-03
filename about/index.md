@@ -1,6 +1,6 @@
 ---
 layout: layouts/home.njk
-title: About Me
+title: About
 eleventyNavigation:
   key: About
   order: 2
