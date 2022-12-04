@@ -24,7 +24,9 @@
     <header>
       {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
       <nav class="menu">
-        <a class="title" href="{{ '/' | url }}">{{ metadata.title }}</a>
+        <a class="title" href="{{ '/' | url }}">
+          <img src="{{ '/svg/logo.svg' | url }}" alt="Zach on Code">
+        </a>
         <ul>
           {%- for entry in collections.all | eleventyNavigation %}
           <li><a href="{{ entry.url | url }}"{% if entry.url == page.url %} class="nav-item-active"{% endif %}>{{ entry.title }}</a></li>
