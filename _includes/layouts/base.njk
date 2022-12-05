@@ -34,13 +34,7 @@
         </ul>
       </nav>
 
-      <nav class="social-media">
-        <ul>
-          <li>Social</li>
-          <li>media</li>
-          <li>icons</li>
-        </ul>
-      </nav>
+      {% include "social-icons.njk" %}
     </header>
 
     <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
@@ -48,13 +42,7 @@
     </main>
 
     <footer>
-      <nav class="social-media">
-        <ul>
-          <li>Social</li>
-          <li>media</li>
-          <li>icons</li>
-        </ul>
-      </nav>
+      {% include "social-icons.njk" %}
 
       <nav class="footer-text">
         <ul>

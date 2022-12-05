@@ -3,6 +3,18 @@
   text-decoration: none;
 }
 
+/* Social media icons */
+nav.social-icons ul {
+  list-style-type: none;
+}
+nav.social-icons ul li {
+  display: inline;
+}
+nav.social-icons svg {
+  width: 24px;
+  height: 24px;
+}
+
 /* Posts list */
 .postlist {
   list-style: none;

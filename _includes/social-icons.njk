@@ -1,0 +1,35 @@
+<nav class="social-icons">
+  {% svgspriteSocial %}
+  <ul>
+    <li>
+      <a href="https://github.com/{{ social.github }}">
+        {% svgSocial "github" %}
+      </a>
+    </li>
+    <li>
+      <a href="https://{{social.mastodon.server}}/@{{social.mastodon.handle}}">
+        {% svgSocial "mastodon" %}
+      </a>
+    </li>
+    <li>
+      <a href="https://twitter.com/{{social.twitter}}">
+        {% svgSocial "twitter" %}
+      </a>
+    </li>
+    <li>
+      <a href="https://www.linkedin.com/in/{{social.linkedin}}/">
+        {% svgSocial "linkedin" %}
+      </a>
+    </li>
+    <li>
+      <a href="https://stackoverflow.com/users/{{social.stackoverflow.userid}}/{{social.stackoverflow.username}}">
+        {% svgSocial "stackoverflow" %}
+      </a>
+    </li>
+    <li>
+      <a href="{{ '/feed/feed.xml' | url }}">
+        {% svgSocial "rss" %}
+      </a>
+    </li>
+  </ul>
+</nav>

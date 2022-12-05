@@ -9,6 +9,7 @@ const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginNavigation = require("@11ty/eleventy-navigation");
 const sitemap = require("@quasibit/eleventy-plugin-sitemap");
+const svgSprite = require("eleventy-plugin-svg-sprite");
 
 module.exports = function(eleventyConfig) {
   // YAML data files
@@ -33,6 +34,11 @@ module.exports = function(eleventyConfig) {
     sitemap: {
       hostname: "https://zachoncode.dev",
     },
+  });
+  eleventyConfig.addPlugin(svgSprite, {
+    path: "./svg/social",
+    svgSpriteShortcode: "svgspriteSocial",
+    svgShortcode: "svgSocial",
   });
 
   eleventyConfig.addFilter("readableDate", dateObj => {

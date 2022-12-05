@@ -37,6 +37,7 @@
     "markdown-it-anchor": "^8.6.4"
   },
   "devDependencies": {
-    "cross-env": "^7.0.3"
+    "cross-env": "^7.0.3",
+    "eleventy-plugin-svg-sprite": "^2.1.0"
   }
 }

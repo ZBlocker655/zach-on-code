@@ -193,10 +193,12 @@ a[href="#top"]:before {
   transform: rotate(90deg)
 }
 
+/*
 a[href*="://"]:after {
   content: ' ↗';
   text-decoration: none !important
 }
+*/
 
 body>header a {
   font-weight: 700;
