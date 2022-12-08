@@ -1,3 +1,52 @@
+@font-face {
+  font-family: 'Nunito';
+  src: url('../fonts/nunito/nunito-regular-webfont.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Nunito';
+  src: url('../fonts/nunito/nunito-bold-webfont.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Nunito';
+  src: url('../fonts/nunito/nunito-italic-webfont.woff2') format('woff2');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Nunito';
+  src: url('../fonts/nunito/nunito-bolditalic-webfont.woff2') format('woff2');
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Quicksand';
+  src: url('../fonts/quicksand/quicksand-regular-webfont.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Quicksand';
+  src: url('../fonts/quicksand/quicksand-bold-webfont.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Quicksand';
+  src: url('../fonts/quicksand/quicksand-italic-webfont.woff2') format('woff2');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Quicksand';
+  src: url('../fonts/quicksand/quicksand-bolditalic-webfont.woff2') format('woff2');
+  font-weight: bold;
+  font-style: italic;
+}
+
 :root {
   --unit: 1rem;
   --unit-2: 2rem;
@@ -5,8 +54,10 @@
   --leading: 1.4;
   --measure: 960px;
   --measure-min: 288px;
-  --font: -apple-system, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-  --font-header: var(--font);
+  --font-fallback: system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell",Helvetica,sans-serif;
+  --font: Nunito, var(--font-fallback);
+  --font-title: Quicksand, var(--font-fallback);
+  --font-subheader: Quicksand, var(--font-fallback);
   --color-body: #fff;
   --color-body-light: #626A6E;
   --color-body-inverted: #1a1a1a;
@@ -215,28 +266,33 @@ h1, h2, h3, h4, h5, h6 {
   margin: 1em 0 .6em;
 }
 
+h2, h3, h4, h5, h6 {
+  font-family: var(--font-subheader);
+}
+
 h1 {
-  font-size: 3.1579rem
+  font-size: 3.1579rem;
+  font-family: var(--font-title);
 }
 
 h2 {
-  font-size: 3rem
+  font-size: 3rem;
 }
 
 h3 {
-  font-size: 2.25rem
+  font-size: 2.25rem;
 }
 
 h4 {
-  font-size: 1.6875rem
+  font-size: 1.6875rem;
 }
 
 h5 {
-  font-size: 1.5rem
+  font-size: 1.5rem;
 }
 
 h6 {
-  font-size: 1.1875rem
+  font-size: 1.1875rem;
 }
 
 hgroup {

@@ -1,3 +1,4 @@
 _site/
+local-resources/
 node_modules/
 package-lock.json
