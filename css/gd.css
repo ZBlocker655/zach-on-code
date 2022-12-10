@@ -71,6 +71,7 @@
   --color-primary-hover: #89b8df;
   --color-primary-active: #b5cde0;
   --color-primary-visited: #5c2dc0;
+  --color-primary-subdued: #477194;
   --color-secondary: #005a30;
   --color-secondary-hover: #003E21;
   --color-secondary-active: #003E21;
@@ -259,22 +260,23 @@ body>header a {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: bold;
   line-height: 1.2;
   margin: 1em 0 .6em;
 }
 
 h2, h3, h4, h5, h6 {
   font-family: var(--font-subheader);
+  font-weight: normal;
 }
 
 h1 {
+  font-weight: bold;
   font-size: 3.1579rem;
   font-family: var(--font-title);
 }
 
 h2 {
-  font-size: 3rem;
+  font-size: 2.85rem;
 }
 
 h3 {

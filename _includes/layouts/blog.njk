@@ -20,12 +20,44 @@ templateClass: tmpl-post
 {%- set nextPost = collections.blog | getNextCollectionItem(page) %}
 {%- set previousPost = collections.blog | getPreviousCollectionItem(page) %}
 {%- if nextPost or previousPost %}
-<section class="next-previous-posts">
-  <hr>
-  <ul>
-    {%- if nextPost %}<li>Next: <a href="{{ nextPost.url | url }}">{{ nextPost.data.title }}</a></li>{% endif %}
-    {%- if previousPost %}<li>Previous: <a href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a></li>{% endif %}
-  </ul>
-</section>
+<article class="next-previous-posts">
+  {%- if nextPost %}
+    <div class="dir-indicator">
+      <a href="{{ nextPost.url | url }}">
+        {% feather "arrow-right-circle", {
+          width: 48,
+          height: 48
+        } %}
+      </a>
+    </div>
+
+    <div class="next-previous-prompt">Next</div>
+
+    <div class="next-previous-title">
+      <a href="{{ nextPost.url | url }}">
+        {{- nextPost.data.title }}
+      </a>
+    </div>
+  {% endif %}
+
+  {%- if previousPost %}
+    <div class="dir-indicator">
+      <a href="{{ previousPost.url | url }}">
+        {% feather "arrow-left-circle", {
+          width: 48,
+          height: 48
+        } %}
+      </a>
+    </div>
+
+    <div class="next-previous-prompt">Previous</div>
+
+    <div class="next-previous-title">
+      <a href="{{ previousPost.url | url }}">
+        {{- previousPost.data.title }}
+      </a>
+    </div>
+  {% endif %}
+</article>
 {%- endif %}
 {%- endif %}

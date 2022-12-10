@@ -10,6 +10,7 @@ const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginNavigation = require("@11ty/eleventy-navigation");
 const sitemap = require("@quasibit/eleventy-plugin-sitemap");
 const svgSprite = require("eleventy-plugin-svg-sprite");
+const feathericons = require('eleventy-plugin-feathericons');
 
 module.exports = function(eleventyConfig) {
   // YAML data files
@@ -41,6 +42,7 @@ module.exports = function(eleventyConfig) {
     svgSpriteShortcode: "svgspriteSocial",
     svgShortcode: "svgSocial",
   });
+  eleventyConfig.addPlugin(feathericons);
 
   eleventyConfig.addFilter("readableDate", dateObj => {
     return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat("dd LLL yyyy");

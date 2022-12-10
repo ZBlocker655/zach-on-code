@@ -3,14 +3,18 @@ layout: layouts/home.njk
 blogPostsToDisplay: 10
 ---
 
-{% include "intro.njk" %}
-
 <section class="posts">
   {% set maxPosts = collections.blog.length | min(blogPostsToDisplay) %}
-  <h1>Latest posts</h1>
+  <header>
+    <h1>Latest posts</h1>
+  </header>
 
   {% set postslist = collections.blog | head(-1*maxPosts) %}
-  {% include "postslist.njk" %}
+  <article>
+    {% include "postslist.njk" %}
+  </article>
 
-  <p><a href="{{ '/blog/' | url }}">Earlier posts...</a></p>
+  <article>
+    <p><a href="{{ '/blog/' | url }}">Earlier posts...</a></p>
+  </article>
 </section>

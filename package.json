@@ -38,6 +38,7 @@
   },
   "devDependencies": {
     "cross-env": "^7.0.3",
+    "eleventy-plugin-feathericons": "^1.0.1",
     "eleventy-plugin-svg-sprite": "^2.1.0"
   }
 }
