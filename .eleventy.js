@@ -41,10 +41,17 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(svgSprite, {
     path: "./svg/social",
     svgSpriteShortcode: "svgspriteSocial",
-    svgShortcode: "svgSocial",
   });
   eleventyConfig.addPlugin(feathericons);
   eleventyConfig.addPlugin(faviconPlugin);
+
+  eleventyConfig.addShortcode("svgSocial", function (name, title) {
+    return `<svg class=" " aria-describedby="symbol-${name}-desc" aria-labelledby="symbol-${name}-desc" role="group">
+                <title>${title}</title>
+                <desc id="symbol-${name}-desc-content">${name} icon</desc>
+                <use xlink:href="#svg-${name}"></use>
+            </svg>`;
+  });
 
   eleventyConfig.addFilter("readableDate", dateObj => {
     return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat("dd LLL yyyy");

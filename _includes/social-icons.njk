@@ -3,32 +3,32 @@
   <ul>
     <li>
       <a href="https://github.com/{{ social.github }}">
-        {% svgSocial "github" %}
+        {% svgSocial "github", "GitHub" %}
       </a>
     </li>
     <li>
       <a href="https://{{social.mastodon.server}}/@{{social.mastodon.handle}}">
-        {% svgSocial "mastodon" %}
+        {% svgSocial "mastodon", "Mastodon" %}
       </a>
     </li>
     <li>
       <a href="https://twitter.com/{{social.twitter}}">
-        {% svgSocial "twitter" %}
+        {% svgSocial "twitter", "Twitter" %}
       </a>
     </li>
     <li>
       <a href="https://www.linkedin.com/in/{{social.linkedin}}/">
-        {% svgSocial "linkedin" %}
+        {% svgSocial "linkedin", "LinkedIn" %}
       </a>
     </li>
     <li>
       <a href="https://stackoverflow.com/users/{{social.stackoverflow.userid}}/{{social.stackoverflow.username}}">
-        {% svgSocial "stackoverflow" %}
+        {% svgSocial "stackoverflow", "StackOverflow" %}
       </a>
     </li>
     <li>
       <a href="{{ '/feed/feed.xml' | url }}">
-        {% svgSocial "rss" %}
+        {% svgSocial "rss", "Feed" %}
       </a>
     </li>
   </ul>
