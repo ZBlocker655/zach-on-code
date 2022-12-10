@@ -61,16 +61,16 @@
   --color-body: #fff;
   --color-body-light: #626A6E;
   --color-body-inverted: #1a1a1a;
-  --color-select: #b3d4fc;
-  --color-access: #fd0;
+  --color-select: #ff8f00;
+  --color-access: hsl(69, 71%, 57%);
   --color-error: #f00;
   --color-line: #b1b4b6;
   --color-light: #505050;
   --color-very-light: #f3f2f1;
-  --color-primary: #005ea5;
-  --color-primary-hover: #003078;
-  --color-primary-active: #2b8cc4;
-  --color-primary-visited: #4c2c92;
+  --color-primary: #6baadd;
+  --color-primary-hover: #89b8df;
+  --color-primary-active: #b5cde0;
+  --color-primary-visited: #5c2dc0;
   --color-secondary: #005a30;
   --color-secondary-hover: #003E21;
   --color-secondary-active: #003E21;
@@ -155,7 +155,7 @@ header nav :last-child {
 }
 
 nav a {
-  color: var(--color-body)
+  color: var(--color-body);
 }
 
 nav ol, nav ul {
@@ -171,10 +171,10 @@ header+nav {
 }
 
 nav li {
-  display: inline
+  display: inline;
 }
 
-header nav li+li {
+nav li+li {
   margin-left: var(--unit)
 }
 
@@ -217,6 +217,7 @@ a:active {
   color: var(--color-primary-active)
 }
 
+/*
 a:focus {
   outline-offset: 0;
   outline: 3px solid transparent;
@@ -225,6 +226,7 @@ a:focus {
   background-color: var(--color-access);
   box-shadow: 0 -2px var(--color-access), 0 2px var(--color-body)
 }
+*/
 
 a[href="javascript:history.back()"]:before, a[href="#top"]:before, figcaption:before {
   content: '';
@@ -254,10 +256,6 @@ a[href*="://"]:after {
 body>header a {
   font-weight: 700;
   text-decoration: none
-}
-
-body>header a:hover {
-  text-decoration: underline;
 }
 
 h1, h2, h3, h4, h5, h6 {
