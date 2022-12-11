@@ -27,6 +27,11 @@
       </a>
     </li>
     <li>
+      <a href="mailto:{{ metadata.author.email }}">
+        {% svgSocial "email", metadata.author.email %}
+      </a>
+    </li>
+    <li>
       <a href="{{ '/feed/feed.xml' | url }}">
         {% svgSocial "rss", "Feed" %}
       </a>
