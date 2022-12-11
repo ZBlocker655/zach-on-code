@@ -18,6 +18,33 @@ Capitalize on low hanging fruit to identify a ballpark value added activity to b
   <p>And now you know the rest of the story.</p>
 </details>
 
+
+```csharp
+using System;
+
+// this is a command
+class MyClass {
+  public string MyCommand() {
+    var counter = 0;
+    counter++;
+
+    // Test with a line break above this line.
+    Console.WriteLine('Test');
+  }
+}
+```
+
+```javascript
+// this is a command
+function myCommand() {
+	let counter = 0;
+	counter++;
+}
+
+// Test with a line break above this line.
+console.log('Test');
+```
+
 ```diff-js
 // this is a command
 function myCommand() {
