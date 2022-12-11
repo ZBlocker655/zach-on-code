@@ -1,6 +1,6 @@
 # Content
 
-All the files inside the directories `blog`, `_data`, and `_includes/copy` are licensed under
+All the files inside the directories `blog`, `_data`, `about`, and `_includes` are licensed under
 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). The attribution requirement is only met when:
 
 1. The canonical link is directed towards the original article, e.g.
@@ -10,7 +10,7 @@ All the files inside the directories `blog`, `_data`, and `_includes/copy` are l
 
 # Images
 
-All the files inside `img` directories are copyrighted to Zachary Blocker. All rights reserved.
+All the files inside `img` directories, as well as `svg\logo.svg`, are copyrighted to Zachary Blocker. All rights reserved.
 
 # Other files
 
