@@ -12,8 +12,12 @@
     </title>
     <meta name="description" content="{{ description or metadata.description }}">
     <meta name="generator" content="{{ eleventy.generator }}">
-
     {% favicon './favicon.svg' %}
+    {% set socialShareImgUrl %}
+      {% include "social-share-image.njk" %}
+    {% endset %}
+    <meta name="og:image" content="{{ socialShareImgUrl | trim }}">
+    <meta name="twitter:image" content="{{ socialShareImgUrl | trim }}">
 
     <link rel="stylesheet" href="{{ '/css/gd.css' | url }}">
     <link rel="stylesheet" href="{{ '/css/index.css' | url }}">

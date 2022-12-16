@@ -1,0 +1,62 @@
+<style type="text/css">
+  html, body {
+    margin: 0;
+    border: 0;
+    padding: 1px;
+    background-color: #999;
+  }
+  .frame {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: 1fr 2fr;
+    grid-column-gap: 20px;
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+  .frame .title {
+    grid-column: 1 / span 2;
+    grid-row: 1 / 2;
+    margin: auto;
+    text-align: center;
+  }
+  .frame .title h1 {
+    font-family: Quicksand;
+    font-size: 45px;
+    font-weight: normal;
+  }
+  .frame .logo {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    padding: 10px;
+  }
+  .frame .logo svg {
+    width: 100%;
+    height: 100%;
+  }
+  .frame .feature {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    font-family: Quicksand;
+    font-style: italic;
+    font-size: 25px;
+    margin: auto;
+    padding: 20px;
+  }
+</style>
+
+<div class="frame">
+  <div class="title">
+    <h1>{{ socialShareTitle if socialShareTitle else title }}</h1>
+  </div>
+  <div class="logo">
+    {% include "../../../svg/logo.svg" %}
+  </div>
+  <div class="feature">
+    {% if socialShareDescription %}
+      {{ socialShareDescription }}
+    {% endif %}
+  </div>
+</div>

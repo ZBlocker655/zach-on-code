@@ -12,6 +12,7 @@ const sitemap = require("@quasibit/eleventy-plugin-sitemap");
 const svgSprite = require("eleventy-plugin-svg-sprite");
 const feathericons = require('eleventy-plugin-feathericons');
 const faviconPlugin = require("eleventy-favicon");
+const socialImg = require('eleventy-plugin-social-img');
 
 module.exports = function(eleventyConfig) {
   // YAML data files
@@ -21,6 +22,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("img");
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("fonts");
+  eleventyConfig.addPassthroughCopy("social-share");
   eleventyConfig.addPassthroughCopy("svg");
 
   // Add plugins
@@ -44,6 +46,7 @@ module.exports = function(eleventyConfig) {
   });
   eleventyConfig.addPlugin(feathericons);
   eleventyConfig.addPlugin(faviconPlugin);
+  eleventyConfig.addPlugin(socialImg);
 
   eleventyConfig.addShortcode("svgSocial", function (name, title) {
     return `<svg class=" " aria-describedby="symbol-${name}-desc" aria-labelledby="symbol-${name}-desc" role="group">

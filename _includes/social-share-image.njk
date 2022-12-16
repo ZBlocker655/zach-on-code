@@ -1,0 +1,17 @@
+{% if socialShareImageTemplate %}
+  {% set socialShareImgHtml %}
+    {% include "layouts/social-share/" + socialShareImageTemplate + ".njk" %}
+  {% endset %}
+
+  {% socialImg
+    inputDir=".",
+    input=socialShareImgHtml,
+    inputType="html",
+    outputPath="/social-share/",
+    fileName=page.fileSlug,
+    width="1200px",
+    height="630px"
+  %}
+{% else %}
+  /img/defaultSocialShare.png
+{% endif %}
