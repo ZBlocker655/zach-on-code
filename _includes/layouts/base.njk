@@ -3,22 +3,42 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
+    {%- set pageTitle %}
       {%- if title %}
         {{ title }} | {{ metadata.title }}
       {%- else %}
         {{ metadata.title }}
       {%- endif %}
-    </title>
+    {% endset %}
+    <title>{{ pageTitle | trim }}</title>
+    <meta name="author" content="{{ metadata.author.name }}">
+    <meta name="title" content="{{ pageTitle | trim }}">
     <meta name="description" content="{{ description or metadata.description }}">
     <meta name="generator" content="{{ eleventy.generator }}">
     {% favicon './favicon.svg' %}
+
     {% set socialShareImgUrl %}
       {% include "social-share-image.njk" %}
     {% endset %}
-    <meta name="og:image" content="{{ socialShareImgUrl | trim }}">
+    {# Open Graph #}
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ metadata.url }}">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="{{ pageTitle | trim }}">
+    <meta property="og:description" content="{{ description or metadata.description }}">
+    <meta property="og:image" content="{{ socialShareImgUrl | trim }}">
+    <meta property="og:image:alt" content="{{ pageTitle | trim }}">
+    {# Twitter #}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@{{social.twitter}}">
+    <meta name="twitter:creator" content="@{{social.twitter}}">
+    <meta name="twitter:url" content="{{ metadata.url }}">
+    <meta name="twitter:title" content="{{ pageTitle | trim }}">
+    <meta name="twitter:description" content="{{ description or metadata.description }}">
     <meta name="twitter:image" content="{{ socialShareImgUrl | trim }}">
+    <meta name="twitter:image:alt" content="{{ pageTitle | trim }}">
 
+    <link rel="canonical" href="{{ metadata.url }}">
     <link rel="stylesheet" href="{{ '/css/gd.css' | url }}">
     <link rel="stylesheet" href="{{ '/css/index.css' | url }}">
     <link rel="stylesheet" href="{{ '/css/prism-z-touch.css' | url }}">
