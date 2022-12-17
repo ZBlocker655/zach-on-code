@@ -13,6 +13,7 @@ const svgSprite = require("eleventy-plugin-svg-sprite");
 const feathericons = require('eleventy-plugin-feathericons');
 const faviconPlugin = require("eleventy-favicon");
 const socialImg = require('eleventy-plugin-social-img');
+const safeLinks = require('@sardine/eleventy-plugin-external-links');
 
 module.exports = function(eleventyConfig) {
   // YAML data files
@@ -47,6 +48,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(feathericons);
   eleventyConfig.addPlugin(faviconPlugin);
   eleventyConfig.addPlugin(socialImg);
+  eleventyConfig.addPlugin(safeLinks);
 
   eleventyConfig.addShortcode("svgSocial", function (name, title) {
     return `<svg class=" " aria-describedby="symbol-${name}-desc" aria-labelledby="symbol-${name}-desc" role="group">
