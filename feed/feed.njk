@@ -4,7 +4,7 @@ permalink: "{{ metadata.feed.path }}"
 eleventyExcludeFromCollections: true
 ---
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:webfeeds=”http://webfeeds.org/rss/1.0″>
 	<title>{{ metadata.title }}</title>
 	<subtitle>{{ metadata.feed.subtitle }}</subtitle>
 	{% set absoluteUrl %}{{ metadata.feed.path | url | absoluteUrl(metadata.url) }}{% endset %}
@@ -16,8 +16,10 @@ eleventyExcludeFromCollections: true
 		<name>{{ metadata.author.name }}</name>
 		<email>{{ metadata.author.email }}</email>
 	</author>
-  <icon>{{ "/favicon.ico" | url | absoluteUrl(metadata.url) }}</icon>
+  <icon>{{ "/favicon.svg" | url | absoluteUrl(metadata.url) }}</icon>
   <logo>{{ "/img/defaultSocialShare.png" | url | absoluteUrl(metadata.url) }}</logo>
+  <webfeeds:cover image="{{ "/img/defaultSocialShare.png" | url | absoluteUrl(metadata.url) }}" />
+  <webfeeds:icon>{{ "/favicon.svg" | url | absoluteUrl(metadata.url) }}</webfeeds:icon>
 	{%- for post in collections.blog | reverse %}
 	{% set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url) }}{% endset %}
 	<entry>
