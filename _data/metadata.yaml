@@ -2,7 +2,9 @@ title: Zach on Code
 url: https://zachoncode.dev/
 language: en
 description: Zach Blocker's professional blog and portfolio site.
-repository: https://github.com/ZBlocker655/zach-on-code
+repository:
+  url: https://github.com/ZBlocker655/zach-on-code
+  path: ZBlocker655/zach-on-code
 feed:
   subtitle: Zach Blocker's professional blog and portfolio site.
   filename: feed.xml

@@ -190,3 +190,10 @@ a[href].post-tag:focus {
   color: var(--color-primary-hover);
   text-decoration: underline;
 }
+
+/* Comments */
+.comments {
+  margin-top: 1rem;
+  border-top: 1px solid white;
+  padding-top: 2rem;
+}
