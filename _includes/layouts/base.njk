@@ -22,7 +22,7 @@
     {% endset %}
     {# Open Graph #}
     <meta property="og:type" content="website">
-    <meta property="og:url" content="{{ metadata.url }}">
+    <meta property="og:url" content="{{ page.url | absoluteUrl(metadata.url) }}">
     <meta property="og:locale" content="en_US">
     <meta property="og:title" content="{{ pageTitle | trim }}">
     <meta property="og:description" content="{{ description or metadata.description }}">
@@ -38,7 +38,7 @@
     <meta name="twitter:image" content="{{ socialShareImgUrl | trim }}">
     <meta name="twitter:image:alt" content="{{ pageTitle | trim }}">
 
-    <link rel="canonical" href="{{ metadata.url }}">
+    <link rel="canonical" href="{{ page.url | absoluteUrl(metadata.url) }}">
     <link rel="me" href="https://{{social.mastodon.server}}/@{{social.mastodon.handle}}">
     <link rel="stylesheet" href="{{ '/css/gd.css' | url }}">
     <link rel="stylesheet" href="{{ '/css/index.css' | url }}">
