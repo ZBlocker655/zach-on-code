@@ -8,7 +8,6 @@ const yaml = require("js-yaml");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginNavigation = require("@11ty/eleventy-navigation");
-const sitemap = require("@quasibit/eleventy-plugin-sitemap");
 const svgSprite = require("eleventy-plugin-svg-sprite");
 const feathericons = require('eleventy-plugin-feathericons');
 const faviconPlugin = require("eleventy-favicon");
@@ -32,17 +31,6 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
   eleventyConfig.addPlugin(pluginNavigation);
-  eleventyConfig.addPlugin(sitemap, {
-    // Name of the property for the last modification date.
-    // By default it is undefined and the plugin will fallback to `date`.
-    // When set, the plugin will try to use this property and it will fallback
-    // to the `date` property when needed.
-    lastModifiedProperty: "modified",
-
-    sitemap: {
-      hostname: "https://zachoncode.dev",
-    },
-  });
   eleventyConfig.addPlugin(svgSprite, {
     path: "./svg/social",
     svgSpriteShortcode: "svgspriteSocial",
